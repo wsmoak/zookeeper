@@ -19,11 +19,15 @@ For more information on the server and command line interface scripts, see http:
 
 Assuming you have the server and CLI running, in this project:
 
-Modify the build.sh and run.sh files with your path to the ZooKeeper install.
+Modify the build.sh and run.sh files with your path to the ZooKeeper install.  Then execute
 
-$ ./build.sh - compiles the two source code files
+    $ ./build.sh
 
-$ ./run.sh - sets the CLASSPATH and runs the Executor class with the command:
+which compiles the two source code files, and 
+
+    $ ./run.sh
+    
+which sets the CLASSPATH and runs the Executor class.  The command it uses is:
 
 $ java Executor localhost /stuff output.txt ./count.sh
 
@@ -43,21 +47,46 @@ In the terminal window with your CLI, execute:
 
     [zk: 127.0.0.1:2181(CONNECTED) 5] create /stuff my_data
 
-You should see the Watcher/Executor example run your program, './count.sh' in this case, which prints consecutive integers starting with 1 
+You should see the Watcher/Executor example run your program, './count.sh' in this case, which prints consecutive integers starting with 1.
 
-You should also see the output.txt file appear, with the contents 'my_data' (from above when you created it).
+You should also see the output.txt file appear, with the contents 'my_data' (from above when you created it).  Now modify the znode:
 
-    [zk: localhost:2181(CONNECTED) 17] set /stuff other_data
+    [zk: localhost:2181(CONNECTED) 6] set /stuff other_data
 
 You should see the Watcher/Executor example stop and start your program.  In this case it will stop counting and then start over at 1.
 
 You should also see the contents of the output.txt file change to 'other_data', the new contents of the znode.
 
-    [zk: 127.0.0.1:2181(CONNECTED) 6] delete /stuff
+    [zk: 127.0.0.1:2181(CONNECTED) 7] delete /stuff
 
 You should see the Watcher/Executor example say "Killing process" and the script should stop counting.
 
 For more information on the command line interface, see http://zookeeper.apache.org/doc/trunk/zookeeperStarted.html
+
+## Sample Output
+
+In the command line interface
+
+    [zk: localhost:2181(CONNECTED) 16] create /stuff my_data
+    Created /stuff
+    [zk: localhost:2181(CONNECTED) 17] set /stuff other_data
+    [zk: localhost:2181(CONNECTED) 18] delete /stuff
+
+In the running the watcher example
+    2014-11-01 11:05:43,908 [myid:] - INFO [main-SendThread(localhost:2181):ClientCnxn$SendThread@1346] - 
+    Session establishment complete on server localhost/127.0.0.1:2181, sessionid =
+    0x1496bca44fe0002, negotiated timeout = 4000
+    Starting child
+    1
+    2
+    3
+    4
+    Stopping child
+    Starting child
+    1
+    2
+    3
+    Killing process
 
 ## Cleanup
 
