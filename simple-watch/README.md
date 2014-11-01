@@ -1,7 +1,11 @@
 Apache ZooKeeper Simple Watch Example
 =========
 
-see http://zookeeper.apache.org/doc/trunk/javaExample.html
+## Read These First:
+
+- http://zookeeper.apache.org/doc/trunk/zookeeperStarted.html (Download, configure, start, and use the CLI)
+- http://wiki.wsmoak.net/cgi-bin/wiki.pl?ZooKeeperGettingStarted (My notes on getting started)
+- http://zookeeper.apache.org/doc/trunk/javaExample.html (Detailed explanation of the code in this example project)
 
 ## Prerequisites
 
