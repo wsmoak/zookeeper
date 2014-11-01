@@ -1,6 +1,15 @@
 Apache ZooKeeper Simple Watch Example
 =========
 
+The [http://zookeeper.apache.org](Apache ZooKeeper) coordination service helps you with maintaining configuration information,
+naming, providing distributed synchronization, and providing group services for distributed applications. 
+
+This project was inspired by the [http://www.hackerschool.com](Hacker School) Paper of the Week on Google's
+[https://www.hackerschool.com/blog/49-paper-of-the-week-the-chubby-lock-service-for-loosely-coupled-distributed-systems]
+(Chubby Lock Service for Loosely-Coupled Distributed Systems).
+
+Here I expand on the "Simple Watch Client" provided in the ZooKeeper docs, and turn it into a full running example.
+
 ## Read These First:
 
 - http://zookeeper.apache.org/doc/trunk/zookeeperStarted.html (Download, configure, start, and use the CLI)
@@ -61,6 +70,8 @@ You should see the Watcher/Executor example stop and start your program.  In thi
 
 You should also see the contents of the output.txt file change to 'other_data', the new contents of the znode.
 
+Try setting the znode to another string of text and see what happens.
+
     ] delete /stuff
 
 You should see the Watcher/Executor example say "Killing process" and the script should stop counting.
@@ -82,15 +93,15 @@ In the running the watcher example
     Session establishment complete on server localhost/127.0.0.1:2181, sessionid =
     0x1496bca44fe0002, negotiated timeout = 4000
     Starting child
-    1
-    2
-    3
-    4
+    Count: 1 using my_data
+    Count: 2 using my_data
+    Count: 3 using my_data
+    Count: 4 using my_data
     Stopping child
     Starting child
-    1
-    2
-    3
+    Count: 1 using other_data
+    Count: 2 using other_data
+    Count: 3 using other_data
     Killing process
 
 ## Cleanup
