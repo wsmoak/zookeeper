@@ -73,6 +73,7 @@ In the command line interface
     [zk: localhost:2181(CONNECTED) 18] delete /stuff
 
 In the running the watcher example
+
     2014-11-01 11:05:43,908 [myid:] - INFO [main-SendThread(localhost:2181):ClientCnxn$SendThread@1346] - 
     Session establishment complete on server localhost/127.0.0.1:2181, sessionid =
     0x1496bca44fe0002, negotiated timeout = 4000
@@ -92,7 +93,7 @@ In the running the watcher example
 
 $ ./clean.sh - deletes the *.class files and the output.txt file
 
-Other Info
+## Other Info
 
 If you're having classpath problems (NoClassDefFoundError) 
 see http://docs.oracle.com/javase/7/docs/technotes/tools/windows/classpath.html
