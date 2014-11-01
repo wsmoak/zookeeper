@@ -17,7 +17,9 @@ Here I expand on the "Simple Watch Client" provided in the ZooKeeper docs, and t
 
 ## Prerequisites
 
-Download the Apache ZooKeeper .tar.gz file and unpack it (mine is under /Applications)
+[Download](http://zookeeper.apache.org/releases.html) an Apache ZooKeeper .tar.gz file and unpack it.
+
+(I used Apache ZooKeeper 3.5.0-alpha and put it under /Applications.)
 
 You'll need a running ZooKeeper server and a way to connect and modify znodes.
 
