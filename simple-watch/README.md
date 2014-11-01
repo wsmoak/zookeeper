@@ -4,8 +4,8 @@ Apache ZooKeeper Simple Watch Example
 The [http://zookeeper.apache.org](Apache ZooKeeper) coordination service helps you with maintaining configuration information,
 naming, providing distributed synchronization, and providing group services for distributed applications. 
 
-This project was inspired by the (Hacker School)[http://www.hackerschool.com] Paper of the Week on Google's
-(Chubby Lock Service for Loosely-Coupled Distributed Systems)[https://www.hackerschool.com/blog/49-paper-of-the-week-the-chubby-lock-service-for-loosely-coupled-distributed-systems].
+This project was inspired by the [Hacker School](http://www.hackerschool.com) Paper of the Week on Google's
+[Chubby Lock Service for Loosely-Coupled Distributed Systems](https://www.hackerschool.com/blog/49-paper-of-the-week-the-chubby-lock-service-for-loosely-coupled-distributed-systems).
 
 Here I expand on the "Simple Watch Client" provided in the ZooKeeper docs, and turn it into a full running example.
 
