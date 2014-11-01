@@ -43,17 +43,21 @@ For more information on the command line interface, see http://zookeeper.apache.
 
 [zk: 127.0.0.1:2181(CONNECTED) 5] create /stuff my_data
 
-You should see the Watcher/Executor example run your program, './count.sh' in this case, which prints integers startng 
+You should see the Watcher/Executor example run your program, './count.sh' in this case, which prints consecutive integers starting with 1 
 
 You should also see the output.txt file appear, with the contents 'my_data' (from above when you created it).
+
+[zk: localhost:2181(CONNECTED) 17] set /stuff other_data
+
+You should see the Watcher/Executor example stop and start your program.  In this case it will stop counting and then start over at 1.
+
+You should also see the contents of the output.txt file change to 'other_data', the new contents of the znode.
 
 [zk: 127.0.0.1:2181(CONNECTED) 6] delete /stuff
 
 You should see the Watcher/Executor example say "Killing process" and the script should stop counting.
 
 $ ./clean.sh - deletes the *.class files and the output.txt file
-
-TODO:  How do you modify a znode to see the Watcher/Executor restart the program?
 
 Other Info
 
