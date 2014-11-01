@@ -39,6 +39,8 @@ Once the Watcher/Executor is running, you'll need to use a client to modify the 
 
 In the terminal window with your CLI, execute:
 
+For more information on the command line interface, see http://zookeeper.apache.org/doc/trunk/zookeeperStarted.html
+
 [zk: 127.0.0.1:2181(CONNECTED) 5] create /stuff my_data
 
 You should see the Watcher/Executor example run your program, './count.sh' in this case, which prints integers startng 
