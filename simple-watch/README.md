@@ -53,7 +53,8 @@ The arguments are:
 
 - 'output.txt' - The name of the text file it will update with the contents of the znode. (It just writes to the current directory.)
 
-- './count.sh' - The program it will start/stop/restart.  This is a trivial script that simply counts up with a five second delay.
+- './count.sh' - The program it will start/stop/restart.  This is a trivial script that simply counts up with a five second delay, 
+and displays the contents of its "configuration file".
 
 Once the Watcher/Executor is running, you'll need to use a client to modify the znode you told it to 'watch' (/stuff in this case).
 
