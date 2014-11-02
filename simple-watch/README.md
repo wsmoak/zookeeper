@@ -112,5 +112,7 @@ $ ./clean.sh - deletes the *.class files and the output.txt file
 
 ## Other Info
 
+There is a Maven-ized version of this project in the sibling simple-watch-mvn directory.
+
 If you're having classpath problems (NoClassDefFoundError) 
 see http://docs.oracle.com/javase/7/docs/technotes/tools/windows/classpath.html
