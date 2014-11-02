@@ -55,7 +55,7 @@
             <argument>localhost</argument>
             <argument>/stuff</argument>
             <argument>output.txt</argument>
-            <argument>ls</argument>
+            <argument>src/main/scripts/count.sh</argument>
           </arguments>
         </configuration>
       </plugin>
